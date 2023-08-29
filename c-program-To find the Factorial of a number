@@ -1,0 +1,47 @@
+/*C PROGRAM TO FIND THE FACTORIAL WITHOUT A USER DEFINED FUNCTION*/
+#include <stdio.h>
+int main()
+{
+    int num,i;
+    long int fact;
+  
+    printf("Enter an integer number: ");
+    scanf("%d",&num);
+  
+    /*product of numbers from num to 1*/
+    fact=1;
+    for(i=num; i>=1; i--)
+        fact=fact*i;
+         
+    printf("\nFactorial of %d is = %ld",num,fact);
+      
+    return 0;
+}
+
+
+/*C PROGRAM TO FIND THE FACTORIAL WITH USER DEFINED FUNCTION */
+#include<stdio.h>
+long int factorial(int n)
+{
+    int i;
+    long int fact=1;
+ 
+    if(n==1) return fact;
+ 
+    for(i=n;i>=1;i--)
+        fact= fact * i;
+ 
+    return fact;
+}
+  
+int main()
+{
+    int num;
+ 
+    printf("Enter an integer number :");
+    scanf("%d",&num);
+ 
+    printf("\nFactorial of %d is = %ld",num,factorial(num));
+     
+    return 0;
+}
